@@ -1,0 +1,29 @@
+#include <SPI.h>
+#include <Wire.h>
+#include <ArdusatSDK.h>
+
+Display display;
+int demodelay=2000;
+
+void setup() {
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+}
+
+void loop() {
+  // Clear the OLED screen
+  display.clearDisplay();
+  
+  // ------------------------------------------------------------------------------------------------
+  // drawPixel(x, y, color)
+  // Draw one single tiny pixel in the center of the display ( 128x32 pixels )
+  // ------------------------------------------------------------------------------------------------
+  display.drawPixel(2, 5, WHITE);
+  display.drawPixel(3, 6, WHITE);
+  display.drawPixel(4, 7, WHITE);
+  display.drawPixel(5, 7, WHITE);
+  display.drawPixel(6, 7, WHITE);
+  display.drawPixel(7, 7, WHITE);
+  display.drawPixel(8, 7, WHITE);
+  display.display();
+  
+}
