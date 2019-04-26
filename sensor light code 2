@@ -31,7 +31,10 @@ int demodelay=2000;
 
 
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-
+  
+If(lum.lux<10.0){
+ledState = HIGH;
+}
 
   // Clear the OLED screen
   display.clearDisplay();
